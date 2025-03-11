@@ -1,152 +1,583 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Kareem Alhwamdeh</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kareem Alhwamdeh | Computer Engineer</title>
+    <meta name="description" content="Kareem Alhwamdeh - Computer Engineering Student at University of Maryland">
+    <style>
+        /* Modern Portfolio with Blue Theme */
+        :root {
+            --dark-blue: #051937;
+            --medium-blue: #0b3366;
+            --light-blue: #2980b9;
+            --accent: #29D0D0;
+            --text-primary: #ffffff;
+            --text-secondary: #c5ddf8;
+            --text-muted: #94a7c0;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>Kareem Alhwamdeh</h1>
-							<p class="major">An adept and creative student, studying Computer Engineer at the University of Maryland</p>
-							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">More Info</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/Headshot.jpeg" alt="" />
-						</div>
-					</section>
+        body {
+            background: var(--dark-blue);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h3><b>Headstarter AI | Fellowship</b></h3>
-							<p> Over the next weeks, I will be building 5 AI projects and a final project with the goal of getting 1000 people on the waitlist, 1000 accounts created, or generating $1000 in revenue.</p>
-							<p> Skills: Java Script, CSS, HTML, Node.js, React.</p>
-						</div>
-						<div class="image">
-							<img src="images/headstarter-logo.jpeg" alt="Kareem Alhwamdeh" />
-						</div>
-					</section>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h3><b>Thorlabs | Internship</b></h3>
-							<p>As a firmware engineering intern at Thorlabs, I developed Python modules to automate the testing of planar lightwave circuits (PLCs), a previously unimplemented technology at Thorlabs. This automation allowed for pre-packaging testing, reducing expenses, resources, and time, while enhancing defect detection. Utilizing Python libraries like matplotlib, pyvisa, pythonnet, and pandas, I applied my strong object-oriented programming skills to achieve the project goals.</p>
-							<p>Skills: Python(matplotlib, pyvisa, pythonnet, pandas), .NET Framework</p>
-						</div>
-						<div class="image">
-							<img src="images/thorlabs-logo-square-white-bg-most-space.png" alt="Kareem Alhwamdeh" />
-						</div>
-					</section>
+        /* Header & Navigation */
+        header {
+            padding: 2rem 0;
+            position: relative;
+        }
 
-				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h3><b>University of Maryland Optics Labratory | Research Assistant</b></h3>
-							<p>As a Research Assistant, I assembled and automated a laser profilometer using Arduino and a stepper motor for real-time image capture. I programmed software in Python using OpenCV library to analyze images, measuring laser beam intensity and reflectivity variations while scanning the profile to obtain its accurate dimensions.</p>
-							<p>Skills: Python, OpenCV, C/C++, Arduino, MATLAB</p>
-						</div>
-						<div class="image">
-							<img src="images/umd-logo.jpg" alt="Kareem Alhwamdeh" />
-						</div>
-					</section>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-				<!-- Five -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>My Projects</h2>
-							<p>Below I will include some of my technical projects that I've worked on, showcasing my skills in programming and computer science</p>
-						</div>
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--light-blue), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-						<!-- Gallery -->
-							<div class="gallery style2 medium lightbox onscroll-fade-in">
-								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
-										<img src="images/gallery/thumbs/01.jpg" alt="Kareem Alhwamdeh" />
-									</a>
-									<div class="caption">
-										<h3>Thorlabs Report</h3>
-										<p>comprehensive Report on My Thorlabs Project: Code, Equations, and Graphs</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/02.jpg" class="image">
-										<img src="images/gallery/thumbs/02.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Blackjack Game</h3>
-										<p>developed fully functioning blackjack game in java.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/03.jpg" class="image">
-										<img src="images/gallery/thumbs/03.jpg" alt="Kareem Alhwamdeh" />
-									</a>
-									<div class="caption">
-										<h3>Coming Soon</h3>
-										<p></p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-					</section>
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
 
-				
-				<div class="spacer"></div>
-				<!-- Seven -->
-				<section id="social-media" class="wrapper style1">
-					<div class="align-center">
-						<h2>Get in touch</h2>
-					</div>
-					<div class="inner medium">
-						<ul>
-							<li id="linkedin">
-								<a href="https://www.linkedin.com/in/kareem-alhwamdeh/" class="icon brands style2 fa-linkedin-in">
-									LinkedIn
-								</a>
-							</li>
-							<li id="email"><span class="icon style2 fa-envelope"> kalhwamd@terpmail.umd.edu</span></li>
-						</ul>
-					</div>
-					<div class="align-center">
-						<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</div>
-				</section>
-				
-				
-			</div>
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
-	</body>
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
+            border: 4px solid var(--medium-blue);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--light-blue), var(--accent));
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--light-blue);
+            color: var(--text-primary);
+        }
+
+        /* About Section */
+        section {
+            padding: 6rem 0;
+        }
+        
+        #experience {
+            padding-bottom: 8rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Experience Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--medium-blue);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--light-blue);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            padding: 0.5rem;
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(5, 25, 55, 0.95), transparent);
+            padding: 1.5rem;
+            transform: translateY(100px);
+            transition: transform 0.3s;
+            opacity: 0.9;
+        }
+
+        .project-card:hover .project-info {
+            transform: translateY(0);
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--medium-blue);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact h2 {
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            padding: 0.7rem 1.2rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            width: fit-content;
+            justify-content: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-width: 220px;
+            flex: 0 1 auto;
+        }
+        
+        .social-link svg {
+            min-width: 24px;
+            flex-shrink: 0;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--light-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text, .hero-image {
+                min-width: 100%;
+            }
+
+            .hero p {
+                margin: 0 auto 2rem auto;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-link {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .social-link {
+                font-size: 0.9rem;
+                padding: 0.6rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Kareem.dev</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kareem <span class="highlight">Alhwamdeh</span></h1>
+                    <p>Computer Engineering Student at University of Maryland, passionate about firmware engineering, AI, and software development.</p>
+                    <a href="#experience" class="btn">View Experience</a>
+                    <a href="#projects" class="btn btn-outline">See Projects</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Headshot.jpeg" alt="Kareem Alhwamdeh">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <p>My journey through education and industry experiences</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <img src="images/thorlabs-logo-square-white-bg-most-space.png" alt="Thorlabs Logo">
+                            </div>
+                        </div>
+                        <h3>Thorlabs Firmware Engineering Intern</h3>
+                        <p>Developed Python modules to automate testing of planar lightwave circuits (PLCs), introducing this technology to Thorlabs for the first time. The automation process enabled pre-packaging testing with improved defect detection.</p>
+                        <p>Working directly with the engineering team, I implemented a comprehensive testing solution that allowed for quality control at earlier stages of the manufacturing process, significantly reducing costs and improving product reliability.</p>
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">matplotlib</span>
+                        <span class="skill-tag">pyvisa</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Firmware</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <img src="images/umd-logo.jpg" alt="UMD Logo">
+                            </div>
+                        </div>
+                        <h3>UMD Optics Lab Research Assistant</h3>
+                        <p>Designed and built an automated laser profilometer using Arduino and stepper motors for precise real-time image capture. Developed custom software with Python and OpenCV to analyze laser beam intensity.</p>
+                        <p>The research project focused on advanced optical measurement techniques, requiring both hardware integration skills and sophisticated software development to achieve highly accurate measurement capabilities needed for cutting-edge research.</p>
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Hardware</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Selected technical projects showcasing my software development skills</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/gallery/fulls/01.jpg" alt="Thorlabs Project">
+                    <div class="project-info">
+                        <h3>Thorlabs Automation System</h3>
+                        <p>Comprehensive implementation of PLC testing automation with detailed code, equations, and visualization components</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="images/gallery/fulls/02.jpg" alt="Blackjack Game">
+                    <div class="project-info">
+                        <h3>Blackjack Game</h3>
+                        <p>Fully functional blackjack game implemented in Java with object-oriented design principles</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="images/gallery/fulls/03.jpg" alt="AI Project">
+                    <div class="project-info">
+                        <h3>AI Project (Coming Soon)</h3>
+                        <p>New innovative project currently in development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact">
+                <h2>Get In Touch</h2>
+                <p>Let's connect and discuss opportunities</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kareem-alhwamdeh/" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:kareemalhwamdeh@gmail.com" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                        kareemalhwamdeh@gmail.com
+                    </a>
+                    <a href="https://github.com/kareemalhwamdeh" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kareem Alhwamdeh. All rights reserved.</p>
+        </div>
+    </footer>
 </html>
