@@ -254,8 +254,6 @@
             flex: 1;
             min-width: 300px;
             position: relative;
-            transform-style: preserve-3d;
-            perspective: 1000px;
         }
 
         .hero-image img {
@@ -264,8 +262,6 @@
             border-radius: 20px;
             box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
             border: 4px solid var(--medium-blue);
-            transition: transform 0.5s ease;
-            transform-style: preserve-3d;
         }
 
         .hero h1 {
@@ -1198,20 +1194,7 @@
                 });
             });
 
-            // 3D tilt effect for profile image
-            const heroImage = document.querySelector('.hero-image');
-            const image = heroImage.querySelector('img');
-            
-            heroImage.addEventListener('mousemove', function(e) {
-                const xAxis = (heroImage.offsetWidth / 2 - (e.pageX - heroImage.getBoundingClientRect().left)) / 20;
-                const yAxis = (heroImage.offsetHeight / 2 - (e.pageY - heroImage.getBoundingClientRect().top)) / 20;
-                
-                image.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-            });
-            
-            heroImage.addEventListener('mouseleave', function() {
-                image.style.transform = 'rotateY(0deg) rotateX(0deg)';
-            });
+            // Removed 3D tilt effect for profile image to keep it stable
 
             // Create particle effect for hero section
             const particlesContainer = document.querySelector('.particles');
