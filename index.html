@@ -540,7 +540,7 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" onclick="openPdfModal('Phase%20I%20document.pdf')" style="cursor: pointer;">
+                <div class="project-card" onclick="openPdfModal('Phase I document.pdf')" style="cursor: pointer;">
                     <img src="images/gallery/fulls/01.jpg" alt="Thorlabs Project">
                     <div class="project-info">
                         <h3>Thorlabs Automation System</h3>
@@ -614,7 +614,9 @@
         // Open PDF in modal
         function openPdfModal(pdfPath) {
             // Ensure the path is properly encoded for URLs
-            document.getElementById('pdfFrame').src = encodeURI(decodeURI(pdfPath));
+            // Replace spaces with %20 and handle other special characters
+            const properlyEncodedPath = pdfPath.replace(/%20/g, ' ').replace(/\s+/g, '%20');
+            document.getElementById('pdfFrame').src = properlyEncodedPath;
             document.getElementById('pdfModal').style.display = 'block';
             document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
         }
