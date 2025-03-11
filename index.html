@@ -324,8 +324,9 @@
 
         .typing-effect::after {
             content: '|';
-            position: absolute;
-            right: -5px;
+            position: relative;
+            display: inline-block;
+            margin-left: 2px;
             animation: blink 0.8s infinite;
         }
 
@@ -703,6 +704,24 @@
             animation: rotate 30s linear infinite;
             pointer-events: none;
         }
+        
+        .contact-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .contact-particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
 
         @keyframes rotate {
             to {
@@ -899,7 +918,7 @@
                     </label>
                 </div>
                 <div class="nav-links">
-                    <a href="#about">About</a>
+                    <a href="#hero">About</a>
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
@@ -908,7 +927,7 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="particles"></div>
         <div class="container">
             <div class="hero-content">
@@ -1021,6 +1040,7 @@
     <section id="contact">
         <div class="container">
             <div class="contact">
+                <div class="contact-particles"></div>
                 <h2>Get In Touch</h2>
                 <p>Let's connect and discuss opportunities</p>
                 
@@ -1193,25 +1213,41 @@
                 image.style.transform = 'rotateY(0deg) rotateX(0deg)';
             });
 
-            // Create particle effect
+            // Create particle effect for hero section
             const particlesContainer = document.querySelector('.particles');
             const particleCount = 30;
             
             for (let i = 0; i < particleCount; i++) {
-                createParticle();
+                createParticle(particlesContainer, 'particle');
             }
             
-            function createParticle() {
+            // Create particles for contact section
+            const contactParticlesContainer = document.querySelector('.contact-particles');
+            const contactParticleCount = 20;
+            
+            for (let i = 0; i < contactParticleCount; i++) {
+                createParticle(contactParticlesContainer, 'contact-particle', true);
+            }
+            
+            function createParticle(container, className, isContactParticle = false) {
                 const particle = document.createElement('div');
-                particle.classList.add('particle');
+                particle.classList.add(className);
                 
-                // Random size
-                const size = Math.random() * 10 + 5;
+                // Random size - smaller for contact particles
+                const size = isContactParticle ? Math.random() * 8 + 3 : Math.random() * 10 + 5;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 
                 // Random color
-                const hue = Math.random() * 40 + 190; // Blue-ish
+                let hue;
+                if (isContactParticle) {
+                    // Cyan to teal colors for contact section
+                    hue = Math.random() * 40 + 170;
+                } else {
+                    // Blue-ish for hero section
+                    hue = Math.random() * 40 + 190;
+                }
+                
                 particle.style.backgroundColor = `hsl(${hue}, 70%, 60%)`;
                 
                 // Random position
@@ -1220,33 +1256,59 @@
                 
                 // Random animation
                 const duration = Math.random() * 20 + 10;
-                particle.style.animation = `float ${duration}s linear infinite`;
+                const animationName = isContactParticle ? `floatContact${Math.floor(Math.random() * 1000)}` : `float${Math.floor(Math.random() * 1000)}`;
+                particle.style.animation = `${animationName} ${duration}s linear infinite`;
                 particle.style.animationDelay = `${Math.random() * 5}s`;
                 
-                particlesContainer.appendChild(particle);
+                container.appendChild(particle);
                 
-                // Define float animation for each particle
-                const keyframes = `
-                @keyframes float {
-                    0% {
-                        transform: translate(0, 0) rotate(0deg);
-                    }
-                    25% {
-                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50}px) rotate(${Math.random() * 180}deg);
-                    }
-                    50% {
-                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50 - 25}px) rotate(${Math.random() * 360}deg);
-                    }
-                    75% {
-                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50}px) rotate(${Math.random() * 540}deg);
-                    }
-                    100% {
-                        transform: translate(0, 0) rotate(${Math.random() * 720}deg);
-                    }
-                }`;
+                // Different animation patterns for contact particles
+                let keyframesContent;
+                
+                if (isContactParticle) {
+                    // More gentle floating for contact particles
+                    keyframesContent = `
+                    @keyframes ${animationName} {
+                        0% {
+                            transform: translate(0, 0) rotate(0deg);
+                        }
+                        25% {
+                            transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 30}px) rotate(${Math.random() * 90}deg);
+                        }
+                        50% {
+                            transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 30 - 15}px) rotate(${Math.random() * 180}deg);
+                        }
+                        75% {
+                            transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 30}px) rotate(${Math.random() * 270}deg);
+                        }
+                        100% {
+                            transform: translate(0, 0) rotate(${Math.random() * 360}deg);
+                        }
+                    }`;
+                } else {
+                    // Original animation for hero particles
+                    keyframesContent = `
+                    @keyframes ${animationName} {
+                        0% {
+                            transform: translate(0, 0) rotate(0deg);
+                        }
+                        25% {
+                            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50}px) rotate(${Math.random() * 180}deg);
+                        }
+                        50% {
+                            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50 - 25}px) rotate(${Math.random() * 360}deg);
+                        }
+                        75% {
+                            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50}px) rotate(${Math.random() * 540}deg);
+                        }
+                        100% {
+                            transform: translate(0, 0) rotate(${Math.random() * 720}deg);
+                        }
+                    }`;
+                }
                 
                 const style = document.createElement('style');
-                style.innerHTML = keyframes;
+                style.innerHTML = keyframesContent;
                 document.head.appendChild(style);
             }
         });
