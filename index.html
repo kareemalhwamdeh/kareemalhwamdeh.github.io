@@ -259,9 +259,14 @@
         .hero-image img {
             width: 100%;
             max-width: 400px;
-            border-radius: 20px;
+            border-radius: 50%;
             box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
             border: 4px solid var(--medium-blue);
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-image img:hover {
+            transform: scale(1.03);
         }
 
         .hero h1 {
@@ -600,7 +605,7 @@
             width: 100%;
             background: linear-gradient(to top, rgba(5, 25, 55, 0.95), transparent);
             padding: 1.5rem;
-            transform: translateY(100px);
+            transform: translateY(100%);
             transition: transform 0.3s;
             opacity: 0.9;
         }
@@ -929,7 +934,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Kareem <span class="highlight">Alhwamdeh</span></h1>
-                    <div class="typing-effect" data-text="Computer Engineering Student,Software Developer,Problem Solver"></div>
+                    <span style="font-size: 1.3rem; color: var(--text-secondary);">I am </span><div class="typing-effect" data-text="a Computer Engineering Student,a Software Developer,an Automation & Instrumentation Engineer" style="display: inline-block;"></div>
                     <p>Computer Engineering Student at University of Maryland, passionate about software development and constantly learning new technologies.</p>
                     <a href="#experience" class="btn">View Experience</a>
                     <a href="#projects" class="btn btn-outline">See Projects</a>
@@ -957,8 +962,8 @@
                             </div>
                         </div>
                         <h3>Thorlabs Quantum Electronics - Software Engineering Intern</h3>
-                        <p>Developed Python modules to automate testing of planar lightwave circuits (PLCs), introducing this technology to Thorlabs for the first time. The automation process enabled pre-packaging testing with improved defect detection.</p>
-                        <p>Working directly with the engineering team, I implemented a comprehensive testing solution that allowed for quality control at earlier stages of the manufacturing process, significantly reducing costs and improving product reliability.</p>
+                        <p>Developed a fully automated testing pipeline for planar lightwave circuits (PLCs), introducing this technology to Thorlabs for the first time. Created a Python-based control system that interfaced with stepper and piezoelectric motors across 6 axes using .NET framework and PyVISA, while controlling laser diode drivers and power meters via SCPI protocols to coordinate real-time measurements.</p>
+                        <p>Working directly with the engineering team, I implemented comprehensive testing solutions for early-stage quality control, resolving hardware-software synchronization issues including motor calibration challenges. Data analysis was performed using NumPy, Pandas, and Matplotlib with Gaussian fitting techniques, significantly reducing costs and improving product reliability.</p>
                     </div>
                     <div class="skills">
                         <span class="skill-tag">Python</span>
@@ -969,7 +974,6 @@
                         <span class="skill-tag">PyVISA</span>
                         <span class="skill-tag">.NET</span>
                         <span class="skill-tag">OOP</span>
-                        <span class="skill-tag">Software</span>
                     </div>
                 </div>
 
@@ -981,8 +985,8 @@
                             </div>
                         </div>
                         <h3>University of Maryland Fiber Optics - Research Assistant</h3>
-                        <p>Designed and built an automated laser profilometer using Arduino and stepper motors for precise real-time image capture. Developed custom software with Python and OpenCV to analyze laser beam intensity.</p>
-                        <p>The research project focused on advanced optical measurement techniques, requiring both hardware integration skills and sophisticated software development to achieve highly accurate measurement capabilities needed for cutting-edge research.</p>
+                        <p>Assembled and programmed a laser profilometer system to automate micron-level surface scanning, integrating Arduino-controlled stepper motors with a high-resolution USB camera for synchronized image capture. Achieved precise motion control for etched glass surface profiling with real-time imaging capabilities.</p>
+                        <p>Developed a comprehensive software pipeline using Python with OpenCV and MATLAB to generate surface depth maps and detect light intensity variations. This enabled artifact detection and power diagnostics through computer vision techniques, providing critical data for the lab's advanced optical measurement research.</p>
                     </div>
                     <div class="skills">
                         <span class="skill-tag">Python</span>
@@ -1000,8 +1004,8 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Selected technical projects showcasing my software development skills</p>
+                <h2>Featured Projects & Lab Reports</h2>
+                <p>Selected technical work showcasing my engineering skills</p>
             </div>
 
             <div class="projects-grid">
@@ -1014,16 +1018,17 @@
                     </div>
                 </div>
                 
-                <div class="project-card" data-delay="200">
-                    <img src="images/gallery/fulls/02.jpg" alt="Blackjack Game">
+                <div class="project-card" data-delay="200" onclick="window.open('ENEE416_Final_Lab_Report.pdf', '_blank')" style="cursor: pointer;">
+                    <img src="images/fab_report_ss.PNG" alt="Wafer Fabrication Lab">
                     <div class="project-info">
-                        <h3>Blackjack Game</h3>
-                        <p class="hover-description">Fully functional blackjack game implemented in Java with object-oriented design principles</p>
+                        <h3>Silicon Wafer Fabrication Lab</h3>
+                        <p class="hover-description">Complete fabrication process of a 4-inch p-type silicon wafer, including photolithography, doping, and testing</p>
+                        <span class="btn-small" onclick="window.open('ENEE416_Final_Lab_Report.pdf', '_blank'); event.stopPropagation();">View Project Report</span>
                     </div>
                 </div>
                 
                 <div class="project-card" data-delay="400">
-                    <img src="images/gallery/fulls/03.jpg" alt="AI Project">
+                    <img src="images/coming_soon.jpg" alt="AI Project">
                     <div class="project-info">
                         <h3>AI Project (Coming Soon)</h3>
                         <p class="hover-description">New innovative project currently in development</p>
